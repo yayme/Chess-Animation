@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#board {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.capture {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.checkmate {
+  background-color: red !important;
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: yellow;
+  }
+}
